@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Producto
+ * Class Peluquerium
  *
  * @property $id
  * @property $nombreProducto
@@ -19,15 +19,15 @@ use Illuminate\Database\Eloquent\Model;
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Producto extends Model
+class Peluquerium extends Model
 {
-
+    
     static $rules = [
 		'nombreProducto' => 'required',
 		'descripcion' => 'required',
 		'precio' => 'required',
 		'imagen' => 'required',
-        'codigo' => 'required',
+		'codigo' => 'required',
     ];
 
     protected $perPage = 20;

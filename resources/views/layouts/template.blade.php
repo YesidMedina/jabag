@@ -39,13 +39,22 @@ https://templatemo.com/tm-556-catalog-z
                     <a class="nav-link nav-link-1 active" aria-current="page" href="/">Spa de uñas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="videos.html">Peluqueria</a>
+                    <a class="nav-link nav-link-2" href="/peluqueria">Peluqueria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-2" href="/barberia">Barberia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-2" href="/cosmetico">Cosmeticos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-2" href="/aseopersonal">Aseo personal</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-3" href="/nosotros">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="contacto">Contacto</a>
+                    <a class="nav-link nav-link-4" href="/contacto">Contacto</a>
                     <li class="nav-item">
                     <a class="nav-link nav-link-4" href="/login">login</a>
                 </li>

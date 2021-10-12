@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Producto
+    Aseo Personal
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Producto') }}
+                                {{ __('Aseo Personal') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('productos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('aseo-personals.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -40,34 +40,29 @@
 										<th>Descripcion</th>
 										<th>Precio</th>
 										<th>Imagen</th>
-                                        <th>Codigo</th>
+										<th>Codigo</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($productos as $producto)
+                                    @foreach ($aseoPersonal as $aseoPersonal)
                                         <tr>
                                             <td>{{ ++$i }}</td>
 
-											<td>{{ $producto->nombreProducto }}</td>
-											<td>{{ $producto->descripcion }}</td>
-											<td>{{ $producto->precio }}</td>
-											//<td>{{ $producto->imagen }}</td>
-
-                                            <td> <img src="/imagen/{{$producto->imagen}}"> </td>
-
-                                            <td>{{ $producto->codigo }}</td>
-
-
+											<td>{{ $aseoPersonal->nombreProducto }}</td>
+											<td>{{ $aseoPersonal->descripcion }}</td>
+											<td>{{ $aseoPersonal->precio }}</td>
+											<td>{{ $aseoPersonal->imagen }}</td>
+											<td>{{ $aseoPersonal->codigo }}</td>
 
                                             <td>
-                                                <form action="{{ route('productos.destroy',$producto->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('productos.show',$producto->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('productos.edit',$producto->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('aseo-personals.destroy',$aseoPersonal->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('aseo-personals.show',$aseoPersonal->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('aseo-personals.edit',$aseoPersonal->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>
@@ -77,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $productos->links() !!}
+                {!! $aseoPersonal->links() !!}
             </div>
         </div>
     </div>

@@ -50,7 +50,7 @@ class ProductoController extends Controller
         return redirect()->route('productos.index')
             ->with('success', 'Producto created successfully.');
             if($request->hasFile('imagen')){
-                $productos['imagen']=$request->file('imagen')->store('uploads','public');
+                $productos['imagen']=$request->file('imagen')-> require('image|mimes:jpg,png|max:1024')->store('uploads','public');
             }
 
     }

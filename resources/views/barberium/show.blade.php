@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $producto->name ?? 'Show Producto' }}
+    {{ $barberium->name ?? 'Show Barberium' }}
 @endsection
 
 @section('content')
@@ -11,38 +11,34 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Producto</span>
+                            <span class="card-title">Show Barberium</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('barberia.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-
+                        
                         <div class="form-group">
                             <strong>Nombreproducto:</strong>
-                            {{ $producto->nombreProducto }}
+                            {{ $barberium->nombreProducto }}
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
-                            {{ $producto->descripcion }}
+                            {{ $barberium->descripcion }}
                         </div>
                         <div class="form-group">
                             <strong>Precio:</strong>
-                            {{ $producto->precio }}
+                            {{ $barberium->precio }}
                         </div>
                         <div class="form-group">
-
-                        //<img src="{asset('img').'/' .$producto->imagen }}" alt="">
                             <strong>Imagen:</strong>
-                            {{ $producto->imagen }}
-¿
+                            {{ $barberium->imagen }}
                         </div>
-
                         <div class="form-group">
                             <strong>Codigo:</strong>
-                            {{ $producto->codigo }}
+                            {{ $barberium->codigo }}
                         </div>
 
                     </div>

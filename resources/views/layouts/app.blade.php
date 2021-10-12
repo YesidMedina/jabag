@@ -24,11 +24,17 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/peluqueria') }}">
+                <a class="navbar-brand" href="{{ url('/cosmeticos') }}">
+                 <a class="navbar-brand" href="{{ url('/barberia') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+
+
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
@@ -36,20 +42,41 @@
                     @if (Auth::check())
 
                     <ul class="navbar-nav mr-auto">
-                     <a class="nav-link" href="{{ route('productos.index') }}">{{ __('Productos') }}</a>
+                     <a class="nav-link" href="{{ route('productos.index') }}">{{ __('Spa de uñas') }}</a>
 
                     </ul>
 
                     @endif
 
-                         @if (Auth::check())
+
+                    @if (Auth::check())
 
                     <ul class="navbar-nav mr-auto">
-                     <a class="nav-link" href="{{ route('productos.index') }}">{{ __('Peluqueria') }}</a>
+                     <a class="nav-link" href="{{ route('peluquerium.index') }}">{{ __('Peluqueria') }}</a>
 
                     </ul>
 
                     @endif
+
+
+                    @if (Auth::check())
+
+                    <ul class="navbar-nav mr-auto">
+                     <a class="nav-link" href="{{ route('cosmeticos.index') }}">{{ __('Cosmeticos') }}</a>
+
+                    </ul>
+
+                    @endif
+
+                     @if (Auth::check())
+
+                    <ul class="navbar-nav mr-auto">
+                     <a class="nav-link" href="{{ route('barberium.index') }}">{{ __('Barberia') }}</a>
+
+                    </ul>
+
+                    @endif
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
