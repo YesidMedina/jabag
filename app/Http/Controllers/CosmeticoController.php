@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cosmetico;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class CosmeticoController
@@ -16,11 +17,14 @@ class CosmeticoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $cosmeticos = Cosmetico::paginate();
+        $texto=trim($request->get('texto'));
+        $cosmeticos=DB::table('cosmeticos')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
+        ->paginate(5);
 
-        return view('cosmetico.index', compact('cosmeticos'))
+        return view('cosmetico.index', compact('cosmeticos', 'texto'))
             ->with('i', (request()->input('page', 1) - 1) * $cosmeticos->perPage());
     }
 

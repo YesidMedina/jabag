@@ -9,7 +9,7 @@ class CatalogobarberController extends Controller
     //
     public function index()
     {
-        $barberias = Barberium::paginate();
+        $barberias = Barberium::paginate(8);
          return view('barberia', compact('barberias'));
     }
 

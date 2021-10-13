@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
 
-                        //<img src="{asset('img').'/' .$producto->imagen }}" alt="">
+                        <img src="{asset('img').'/' .$producto->imagen }}" alt="">
                             <strong>Imagen:</strong>
                             {{ $producto->imagen }}
 ¿

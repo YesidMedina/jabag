@@ -16,6 +16,22 @@
                                 {{ __('Cosmetico') }}
                             </span>
 
+                            <form action="{{route('cosmeticos.index')}}" method="get">
+
+                            <div class="form-row">
+
+                            <div class="col-sm-6">
+                            <input type="text" class="form-control" name="texto" value="{{$texto}}">
+                            </div>
+                            <div class="col-auto">
+                            <input type="submit" class="btn btn-primary" value="Buscar">
+
+
+                            </div>
+                            </div>
+
+                            </form
+
                              <div class="float-right">
                                 <a href="{{ route('cosmeticos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
@@ -35,7 +51,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 										<th>Nombreproducto</th>
 										<th>Descripcion</th>
 										<th>Precio</th>
@@ -49,7 +65,7 @@
                                     @foreach ($cosmeticos as $cosmetico)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 											<td>{{ $cosmetico->nombreProducto }}</td>
 											<td>{{ $cosmetico->descripcion }}</td>
 											<td>{{ $cosmetico->precio }}</td>
@@ -62,7 +78,7 @@
                                                     <a class="btn btn-sm btn-success" href="{{ route('cosmeticos.edit',$cosmetico->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button onclick="return confirm('¿Seguro desea eliminar el registro?')" type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Peluquerium;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 /**
  * Class PeluqueriumController
  * @package App\Http\Controllers
@@ -16,11 +16,15 @@ class PeluqueriumController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $peluqueria = Peluquerium::paginate();
+        $texto=trim($request->get('texto'));
+        $peluqueria=DB::table('peluqueria')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
+        ->paginate(5);
 
-        return view('peluquerium.index', compact('peluqueria'))
+
+        return view('peluquerium.index', compact('peluqueria', 'texto'))
             ->with('i', (request()->input('page', 1) - 1) * $peluqueria->perPage());
     }
 

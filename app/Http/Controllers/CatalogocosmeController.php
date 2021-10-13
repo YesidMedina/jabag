@@ -9,7 +9,7 @@ class CatalogocosmeController extends Controller
     //
     public function index()
     {
-        $cosmeticos = Cosmetico::paginate();
+        $cosmeticos = Cosmetico::paginate(8);
          return view('cosmetico', compact('cosmeticos'));
     }
 

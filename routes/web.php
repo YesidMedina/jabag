@@ -30,6 +30,6 @@ Route::resource('productos', App\Http\Controllers\ProductoController::class)->mi
 Route::resource('peluquerium', App\Http\Controllers\PeluqueriumController::class)->middleware('auth');
 Route::resource('cosmeticos', App\Http\Controllers\CosmeticoController::class)->middleware('auth');
 Route::resource('barberium', App\Http\Controllers\BarberiumController::class)->middleware('auth');
-//Route::resource('aseoPersonal', App\Http\Controllers\AseopersonalController::class)->middleware('auth');
-
+Route::resource('aseopersonal', App\Http\Controllers\AseoPersonalController::class)->middleware('auth');
+Route::post('/image/save', 'ImageController@save')->name('image.save');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

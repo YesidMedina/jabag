@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Barberium;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class BarberiumController
@@ -16,11 +17,14 @@ class BarberiumController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $barberia = Barberium::paginate();
+        $texto=trim($request->get('texto'));
+        $barberia=DB::table('barberia')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
+        ->paginate(5);
 
-        return view('barberium.index', compact('barberia'))
+        return view('barberium.index', compact('barberia','texto'))
             ->with('i', (request()->input('page', 1) - 1) * $barberia->perPage());
     }
 

@@ -16,10 +16,10 @@
                         <span class="card-title">Create Aseo Personal</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('aseo-personals.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('aseopersonal.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('aseo-personal.form')
+                            @include('aseopersonal.form')
 
                         </form>
                     </div>

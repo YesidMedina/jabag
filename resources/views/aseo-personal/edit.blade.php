@@ -16,11 +16,11 @@
                         <span class="card-title">Update Aseo Personal</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('aseo-personals.update', $aseoPersonal->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('aseopersonal.update', $aseoPersonal->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
-                            @include('aseo-personal.form')
+                            @include('aseopersonal.form')
 
                         </form>
                     </div>

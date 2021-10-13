@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Producto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class ProductoController
@@ -16,11 +17,14 @@ class ProductoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $productos = Producto::paginate();
+        $texto=trim($request->get('texto'));
+        $productos=DB::table('productos')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
+        ->paginate(5);
 
-        return view('producto.index', compact('productos'))
+        return view('producto.index', compact('productos','texto'))
             ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());
     }
 

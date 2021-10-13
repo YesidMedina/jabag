@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Administrador') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -27,7 +27,9 @@
                 <a class="navbar-brand" href="{{ url('/peluqueria') }}">
                 <a class="navbar-brand" href="{{ url('/cosmeticos') }}">
                  <a class="navbar-brand" href="{{ url('/barberia') }}">
-                    {{ config('app.name', 'Laravel') }}
+                 <a class="navbar-brand" href="{{ url('/aseopersonal') }}">
+                 <a class="navbar-brand" href="/"><img class="logo"src="img/logojabag.jpeg" style="height:50px "/></a>
+
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -72,6 +74,15 @@
 
                     <ul class="navbar-nav mr-auto">
                      <a class="nav-link" href="{{ route('barberium.index') }}">{{ __('Barberia') }}</a>
+
+                    </ul>
+
+                    @endif
+
+                    @if (Auth::check())
+
+                    <ul class="navbar-nav mr-auto">
+                     <a class="nav-link" href="{{ route('aseopersonal.index') }}">{{ __('Aseo personal') }}</a>
 
                     </ul>
 

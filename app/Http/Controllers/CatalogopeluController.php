@@ -9,7 +9,7 @@ class CatalogopeluController extends Controller
     //
     public function index()
     {
-        $peluqueria = Peluquerium::paginate();
+        $peluqueria = Peluquerium::paginate(8);
          return view('peluqueria', compact('peluqueria'));
     }
 

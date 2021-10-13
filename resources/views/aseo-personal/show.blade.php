@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $aseoPersonal->name ?? 'Show Aseo Personal' }}
+    {{ $aseopersonal->name ?? 'Show Aseo Personal' }}
 @endsection
 
 @section('content')
@@ -14,15 +14,15 @@
                             <span class="card-title">Show Aseo Personal</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('aseo-personals.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('aseopersonal.index') }}"> Back</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <strong>Nombreproducto:</strong>
-                            {{ $aseoPersonal->nombreProducto }}
+                            {{ $aseopersonal->nombreProducto }}
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
@@ -30,15 +30,15 @@
                         </div>
                         <div class="form-group">
                             <strong>Precio:</strong>
-                            {{ $aseoPersonal->precio }}
+                            {{ $aseopersonal->precio }}
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            {{ $aseoPersonal->imagen }}
+                            {{ $aseopersonal->imagen }}
                         </div>
                         <div class="form-group">
                             <strong>Codigo:</strong>
-                            {{ $aseoPersonal->codigo }}
+                            {{ $aseopersonal->codigo }}
                         </div>
 
                     </div>

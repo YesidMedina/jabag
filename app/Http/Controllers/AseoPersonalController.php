@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AseoPersonal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class AseoPersonalController
@@ -16,12 +17,16 @@ class AseoPersonalController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $aseoPersonals = AseoPersonal::paginate();
+        $texto=trim($request->get('texto'));
+        $aseoPersonal=DB::table('aseopersonal')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
+        ->paginate(5);
 
-        return view('aseo-personal.index', compact('aseoPersonals'))
-            ->with('i', (request()->input('page', 1) - 1) * $aseoPersonals->perPage());
+
+        return view('aseopersonal.index', compact('aseoPersonal', 'texto'))
+            ->with('i', (request()->input('page', 1) - 1) * $aseoPersonal->perPage());
     }
 
     /**
@@ -31,8 +36,8 @@ class AseoPersonalController extends Controller
      */
     public function create()
     {
-        $aseoPersonal = new AseoPersonal();
-        return view('aseo-personal.create', compact('aseoPersonal'));
+        $aseopersonal = new Aseopersonal();
+        return view('aseopersonal.create', compact('aseopersonal'));
     }
 
     /**
@@ -43,11 +48,11 @@ class AseoPersonalController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(AseoPersonal::$rules);
+        request()->validate(Aseopersonal::$rules);
 
         $aseoPersonal = AseoPersonal::create($request->all());
 
-        return redirect()->route('aseo-personals.index')
+        return redirect()->route('aseopersonal.index')
             ->with('success', 'AseoPersonal created successfully.');
     }
 
@@ -61,7 +66,7 @@ class AseoPersonalController extends Controller
     {
         $aseoPersonal = AseoPersonal::find($id);
 
-        return view('aseo-personal.show', compact('aseoPersonal'));
+        return view('aseopersonal.show', compact('aseoPersonal'));
     }
 
     /**
@@ -74,7 +79,7 @@ class AseoPersonalController extends Controller
     {
         $aseoPersonal = AseoPersonal::find($id);
 
-        return view('aseo-personal.edit', compact('aseoPersonal'));
+        return view('aseopersonal.edit', compact('aseopersonal'));
     }
 
     /**
@@ -90,7 +95,7 @@ class AseoPersonalController extends Controller
 
         $aseoPersonal->update($request->all());
 
-        return redirect()->route('aseo-personals.index')
+        return redirect()->route('aseopersonal.index')
             ->with('success', 'AseoPersonal updated successfully');
     }
 
@@ -103,7 +108,7 @@ class AseoPersonalController extends Controller
     {
         $aseoPersonal = AseoPersonal::find($id)->delete();
 
-        return redirect()->route('aseo-personals.index')
+        return redirect()->route('aseopersonal.index')
             ->with('success', 'AseoPersonal deleted successfully');
     }
 }
