@@ -18,7 +18,7 @@ Route::get('/peluqueria', [App\Http\Controllers\CatalogopeluController::class, '
 Route::get('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'index'])->name('barberia');
 Route::get('/cosmetico', [App\Http\Controllers\CatalogocosmeController::class, 'index'])->name('cosmetico');
 Route::get('/aseoPersonal', [App\Http\Controllers\CatalogoaseoController::class, 'index'])->name('aseoPersonal');
-
+Route::get('/welcomeshow', [App\Http\Controllers\CatalogoController::class, 'index'])->name('welcome');
 
 
 

@@ -1,20 +1,23 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('template_title')
-    {{ $aseopersonal->name ?? 'Show Aseo Personal' }}
+    {{ $producto->name ?? 'Show Producto' }}
 @endsection
 
+
 @section('content')
-    <section class="content container-fluid">
+
+
+<section class="content container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Detalle del prodúcto</span>
+                            <span class="card-title">Detalle del Producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('aseopersonal.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('welcome') }}"> Atras</a>
                         </div>
                     </div>
 
@@ -22,23 +25,27 @@
 
                         <div class="form-group">
                             <strong>Nombreproducto:</strong>
-                            {{ $aseopersonal->nombreProducto }}
+                            {{ $producto->nombreProducto }}
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
-                            {{ $aseoPersonal->descripcion }}
+                            {{ $producto->descripcion }}
                         </div>
                         <div class="form-group">
                             <strong>Precio:</strong>
-                            {{ $aseopersonal->precio }}
+                            {{ $producto->precio }}
                         </div>
                         <div class="form-group">
+
+                        <img src="/uploads/{{$producto->imagen }}" alt="">
                             <strong>Imagen:</strong>
-                            {{ $aseopersonal->imagen }}
+                            
+¿
                         </div>
+
                         <div class="form-group">
                             <strong>Codigo:</strong>
-                            {{ $aseopersonal->codigo }}
+                            {{ $producto->codigo }}
                         </div>
 
                     </div>
@@ -46,4 +53,5 @@
             </div>
         </div>
     </section>
-@endsection
+
+    @endsection

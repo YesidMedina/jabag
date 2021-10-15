@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Cosmetico</span>
+                            <span class="card-title">Detalle del prodúcto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('cosmeticos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('cosmeticos.index') }}"> Atras</a>
                         </div>
                     </div>
 

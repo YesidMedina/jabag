@@ -49,13 +49,23 @@ class ProductoController extends Controller
     {
         request()->validate(Producto::$rules);
 
-        $producto = Producto::create($request->all());
+        $producto = new  Producto();
+
+        if($request->hasFile('imagen')){
+            $imagen = $request->file("imagen");
+            $imagen->move('uploads', $imagen->getClientOriginalName());
+
+            $producto->imagen = $imagen->getClientOriginalName();
+        }
+
+        $producto->nombreProducto = $request["nombreProducto"];
+        $producto->descripcion = $request["descripcion"];
+        $producto->precio = $request["precio"];
+        $producto->codigo = $request["codigo"];
+        $producto->save();
 
         return redirect()->route('productos.index')
             ->with('success', 'Producto created successfully.');
-            if($request->hasFile('imagen')){
-                $productos['imagen']=$request->file('imagen')-> require('image|mimes:jpg,png|max:1024')->store('uploads','public');
-            }
 
     }
 

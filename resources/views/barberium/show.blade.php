@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Barberium</span>
+                            <span class="card-title">Detalle del producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('barberia.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('barberia.index') }}"> Atras</a>
                         </div>
                     </div>
 

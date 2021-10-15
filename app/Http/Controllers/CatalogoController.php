@@ -17,6 +17,13 @@ class CatalogoController extends Controller
          return view('welcome', compact('productos'));
     }
 
+    public function show($id)
+    {
+        $producto = Producto::find($id);
+
+        return view('welcomeshow', compact('welcome'));
+    }
+
 }
 
 

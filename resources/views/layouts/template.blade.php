@@ -116,10 +116,10 @@ https://templatemo.com/tm-556-catalog-z
 
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
                     <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
-                        <li class="mb-2"><a href=""><i class="fab fa-facebook"></i></a></li>
-                        <li class="mb-2"><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li class="mb-2"><a href=""><i class="bi bi-alarm-fill"></i></a></li>
+                        <li class="mb-2"><a href=""><i class="bi bi-twitter"></i></a></li>
                         <li class="mb-2"><a href=""><i class="fab fa-instagram"></i></a></li>
-                        <li class="mb-2"><a href=""><i class="fab fa-pinterest"></i></a></li>
+                        
                     </ul>
                     <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
                     <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a>

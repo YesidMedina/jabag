@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Producto</span>
+                            <span class="card-title">Detalle del Producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('productos.index') }}"> Atras</a>
                         </div>
                     </div>
 
@@ -32,12 +32,9 @@
                             <strong>Precio:</strong>
                             {{ $producto->precio }}
                         </div>
-                        <div class="form-group">
-
-                        <img src="{asset('img').'/' .$producto->imagen }}" alt="">
+                        <div class="form-group">                       
                             <strong>Imagen:</strong>
-                            {{ $producto->imagen }}
-¿
+                            <img src="/uploads/{{$producto->imagen }}" alt="">
                         </div>
 
                         <div class="form-group">
