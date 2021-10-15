@@ -49,7 +49,20 @@ class PeluqueriumController extends Controller
     {
         request()->validate(Peluquerium::$rules);
 
-        $peluquerium = Peluquerium::create($request->all());
+        $peluquerium = new Peluquerium();
+
+        if($request->hasFile('imagen')){
+            $imagen = $request->file("imagen");
+            $imagen->move('public/img', $imagen->getClientOriginalName());
+
+            $peluquerium->imagen = $imagen->getClientOriginalName();
+        }
+
+        $peluquerium->nombreProducto = $request["nombreProducto"];
+        $peluquerium->descripcion = $request["descripcion"];
+        $peluquerium->precio = $request["precio"];
+        $peluquerium->codigo = $request["codigo"];
+        $peluquerium->save();
 
         return redirect()->route('peluquerium.index')
             ->with('success', 'Peluquerium created successfully.');
@@ -94,7 +107,7 @@ class PeluqueriumController extends Controller
 
         $peluquerium->update($request->all());
 
-        return redirect()->route('peluqueria.index')
+        return redirect()->route('peluquerium.index')
             ->with('success', 'Peluquerium updated successfully');
     }
 
@@ -107,7 +120,7 @@ class PeluqueriumController extends Controller
     {
         $peluquerium = Peluquerium::find($id)->delete();
 
-        return redirect()->route('peluqueria.index')
+        return redirect()->route('peluquerium.index')
             ->with('success', 'Peluquerium deleted successfully');
     }
 }

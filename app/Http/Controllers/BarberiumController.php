@@ -49,7 +49,20 @@ class BarberiumController extends Controller
     {
         request()->validate(Barberium::$rules);
 
-        $barberium = Barberium::create($request->all());
+        $barberium = new Barberium();
+
+        if($request->hasFile('imagen')){
+            $imagen = $request->file("imagen");
+            $imagen->move('public/img', $imagen->getClientOriginalName());
+
+            $barberium->imagen = $imagen->getClientOriginalName();
+        }
+
+        $barberium->nombreProducto = $request["nombreProducto"];
+        $barberium->descripcion = $request["descripcion"];
+        $barberium->precio = $request["precio"];
+        $barberium->codigo = $request["codigo"];
+        $barberium->save();
 
         return redirect()->route('barberium.index')
             ->with('success', 'Barberium created successfully.');
@@ -94,7 +107,7 @@ class BarberiumController extends Controller
 
         $barberium->update($request->all());
 
-        return redirect()->route('barberia.index')
+        return redirect()->route('barberium.index')
             ->with('success', 'Barberium updated successfully');
     }
 

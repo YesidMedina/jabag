@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <strong>Nombreproducto:</strong>
                             {{ $cosmetico->nombreProducto }}
@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            {{ $cosmetico->imagen }}
+                              <img height="400" src="/public/img/{{$cosmetico->imagen }}" alt="">
                         </div>
                         <div class="form-group">
                             <strong>Codigo:</strong>

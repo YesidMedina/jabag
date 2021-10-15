@@ -14,12 +14,12 @@
                             <span class="card-title">Detalle del producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('barberia.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('barberium.index') }}"> Atras</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <strong>Nombreproducto:</strong>
                             {{ $barberium->nombreProducto }}
@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            {{ $barberium->imagen }}
+                               <img height="400" src="/public/img/{{$barberium->imagen }}" alt="">
                         </div>
                         <div class="form-group">
                             <strong>Codigo:</strong>

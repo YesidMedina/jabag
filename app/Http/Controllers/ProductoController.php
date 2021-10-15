@@ -53,7 +53,7 @@ class ProductoController extends Controller
 
         if($request->hasFile('imagen')){
             $imagen = $request->file("imagen");
-            $imagen->move('uploads', $imagen->getClientOriginalName());
+            $imagen->move('public/img', $imagen->getClientOriginalName());
 
             $producto->imagen = $imagen->getClientOriginalName();
         }

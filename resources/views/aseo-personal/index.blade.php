@@ -18,7 +18,7 @@
 
 
 
-                         <form action="{{route('aseopersonal.index')}}" method="get">
+                         <form action="{{route('aseoPersonal.index')}}" method="get">
 
                             <div class="form-row">
 

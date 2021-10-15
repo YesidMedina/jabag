@@ -32,9 +32,9 @@
                             <strong>Precio:</strong>
                             {{ $producto->precio }}
                         </div>
-                        <div class="form-group">                       
+                        <div class="form-group">
                             <strong>Imagen:</strong>
-                            <img src="/uploads/{{$producto->imagen }}" alt="">
+                            <img height="400" src="/public/img/{{$producto->imagen }}" alt="">
                         </div>
 
                         <div class="form-group">

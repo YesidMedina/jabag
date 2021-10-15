@@ -69,7 +69,7 @@
 											<td>{{ $barberium->nombreProducto }}</td>
 											<td>{{ $barberium->descripcion }}</td>
 											<td>{{ $barberium->precio }}</td>
-											<td>{{ $barberium->imagen }}</td>
+											<td><img height="50" src="/public/img/{{$barberium->imagen }}" alt="image"></td>
 											<td>{{ $barberium->codigo }}</td>
 
                                             <td>

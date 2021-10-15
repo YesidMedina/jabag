@@ -75,7 +75,7 @@
 
 
 
-                                            <td> <img height="50" src="/uploads/{{$producto->imagen}}" alt="Image" > </td>
+                                            <td> <img height="50" src="/public/img/{{$producto->imagen}}" alt="Image" > </td>
 
                                             <td>{{ $producto->codigo }}</td>
 

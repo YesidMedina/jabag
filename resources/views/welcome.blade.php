@@ -12,7 +12,7 @@
             </button>
         </form>
 </div>
-<div class="container-fluid tm-container-content tm-mt-60">
+    <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row mb-4">
             <h2 class="col-6 tm-text-primary">
                Catálogo de prodúctos
@@ -25,17 +25,17 @@
         </div>
 
 
-
+    </div>
 
   @foreach ($productos as $producto)
 
 
-   <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+<div class="col-xl-3 col-lg-4 col-md-3 col-sm-6 col-12 mb-4">
                 <figure class="effect-ming tm-video-item">
-                    <img src="/uploads/{{$producto->imagen }}" alt="Image" class="img-fluid"/>
+                    <img src="/public/img/{{$producto->imagen }}" alt="Image" class="img-fluid" />
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Ver</h2>
-                        <a href="{{ route('welcome',$producto->id) }}">Ver mas</a>
+                        <a href="{{ route('welcomeshow',$producto->id) }}">Ver mas</a>
                     </figcaption>
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -43,6 +43,8 @@
                     <span>{{ $producto->precio }}</span>
                     <span>{{ $producto->codigo }}</span>
                 </div>
-            </div>
- @endforeach
+</div>
+
+
+@endforeach
 @endsection

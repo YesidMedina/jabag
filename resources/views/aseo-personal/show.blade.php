@@ -14,7 +14,7 @@
                             <span class="card-title">Detalle del prodúcto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('aseopersonal.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('aseoPersonal.index') }}"> Atras</a>
                         </div>
                     </div>
 

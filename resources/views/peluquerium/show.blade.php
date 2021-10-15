@@ -14,12 +14,12 @@
                             <span class="card-title">Detalle del Producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('peluqueria.index') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('peluquerium.index') }}"> Atras</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <strong>Nombreproducto:</strong>
                             {{ $peluquerium->nombreProducto }}
@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            {{ $peluquerium->imagen }}
+                            <img height="400" src="/public/img/{{$peluquerium->imagen }}" alt="">
                         </div>
                         <div class="form-group">
                             <strong>Codigo:</strong>

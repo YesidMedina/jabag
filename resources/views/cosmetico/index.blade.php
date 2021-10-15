@@ -69,7 +69,7 @@
 											<td>{{ $cosmetico->nombreProducto }}</td>
 											<td>{{ $cosmetico->descripcion }}</td>
 											<td>{{ $cosmetico->precio }}</td>
-											<td>{{ $cosmetico->imagen }}</td>
+											<td> <img height="50" src="/public/img/{{$cosmetico->imagen}}" alt="Image" > </td>
 											<td>{{ $cosmetico->codigo }}</td>
 
                                             <td>

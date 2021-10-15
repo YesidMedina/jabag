@@ -36,7 +36,7 @@ class CosmeticoController extends Controller
     public function create()
     {
         $cosmetico = new Cosmetico();
-        return view('cosmetico.create', compact('cosmetico'));
+        return view('cosmeticos.create', compact('cosmetico'));
     }
 
     /**
@@ -49,10 +49,24 @@ class CosmeticoController extends Controller
     {
         request()->validate(Cosmetico::$rules);
 
-        $cosmetico = Cosmetico::create($request->all());
+        $cosmetico = new Cosmetico();
+
+
+        if($request->hasFile('imagen')){
+            $imagen = $request->file("imagen");
+            $imagen->move('public/img', $imagen->getClientOriginalName());
+
+            $cosmetico->imagen = $imagen->getClientOriginalName();
+        }
+
+        $cosmetico->nombreProducto = $request["nombreProducto"];
+        $cosmetico->descripcion = $request["descripcion"];
+        $cosmetico->precio = $request["precio"];
+        $cosmetico->codigo = $request["codigo"];
+        $cosmetico->save();
 
         return redirect()->route('cosmeticos.index')
-            ->with('success', 'Cosmetico created successfully.');
+            ->with('success', 'Cosmeticos created successfully.');
     }
 
     /**
@@ -65,7 +79,7 @@ class CosmeticoController extends Controller
     {
         $cosmetico = Cosmetico::find($id);
 
-        return view('cosmetico.show', compact('cosmetico'));
+        return view('cosmeticos.show', compact('cosmetico'));
     }
 
     /**
@@ -78,7 +92,7 @@ class CosmeticoController extends Controller
     {
         $cosmetico = Cosmetico::find($id);
 
-        return view('cosmetico.edit', compact('cosmetico'));
+        return view('cosmeticos.edit', compact('cosmetico'));
     }
 
     /**
