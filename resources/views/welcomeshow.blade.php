@@ -40,7 +40,7 @@
                         <img src="/uploads/{{$producto->imagen }}" alt="">
                             <strong>Imagen:</strong>
                             
-¿
+
                         </div>
 
                         <div class="form-group">
