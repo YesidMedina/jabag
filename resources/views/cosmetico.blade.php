@@ -12,11 +12,11 @@
     </form>
 </div>
 <div class="container-fluid tm-container-content tm-mt-60">
-    <div class="row mb-4">
-        <h2 class="col-6 tm-text-primary">
+    <div class="mb-4 text-center">
+        <h2 class=" tm-text-primary">
             Catálogo de prodúctos
         </h2>
-        <div class="col-6 d-flex justify-content-end align-items-center">
+        <div>
             <form action="" class="tm-text-primary">
                 Página <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> de 200
             </form>

@@ -40,7 +40,7 @@ https://templatemo.com/tm-556-catalog-z
                     <a class="nav-link nav-link-1 active" aria-current="page" href="/">Spa de uñas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="/peluqueria">Peluqueria</a>
+                    <a class="nav-link nav-link-2 " href="/peluqueria">Peluqueria</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-2" href="/barberia">Barberia</a>
