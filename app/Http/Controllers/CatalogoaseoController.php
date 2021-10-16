@@ -9,8 +9,8 @@ class CatalogoaseoController extends Controller
     //
     public function index()
     {
-        $aseoPersonal = AseoPersonal::paginate(8);
-         return view('aseopersonal', compact('aseoPersonal'));
+        $aseoPersonal = Aseopersonal::paginate(8);
+         return view('aseopersonal', compact('aseopersonal'));
     }
 
 }

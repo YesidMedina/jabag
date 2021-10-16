@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Descripcion:</strong>
-                            {{ $aseoPersonal->descripcion }}
+                            {{ $aseopersonal->descripcion }}
                         </div>
                         <div class="form-group">
                             <strong>Precio:</strong>

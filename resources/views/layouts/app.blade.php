@@ -82,7 +82,7 @@
                     @if (Auth::check())
 
                     <ul class="navbar-nav mr-auto">
-                     <a class="nav-link" href="{{ route('aseopersonal.index') }}">{{ __('Aseo personal') }}</a>
+                     <a class="nav-link" href="{{ route('aseoPersonal.index') }}">{{ __('Aseo personal') }}</a>
 
                     </ul>
 

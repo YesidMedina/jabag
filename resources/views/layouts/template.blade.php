@@ -119,7 +119,7 @@ https://templatemo.com/tm-556-catalog-z
                         <li class="mb-2"><a href=""><i class="bi bi-alarm-fill"></i></a></li>
                         <li class="mb-2"><a href=""><i class="bi bi-twitter"></i></a></li>
                         <li class="mb-2"><a href=""><i class="fab fa-instagram"></i></a></li>
-                        
+
                     </ul>
                     <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
                     <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a>

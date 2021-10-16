@@ -37,7 +37,7 @@ class AseoPersonalController extends Controller
     public function create()
     {
         $aseopersonal = new Aseopersonal();
-        return view('aseoPersonal.create', compact('aseoPersonal'));
+        return view('aseoPersonal.create', compact('aseopersonal'));
     }
 
     /**
@@ -48,9 +48,22 @@ class AseoPersonalController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Aseopersonal::$rules);
+        request()->validate(AseoPersonal::$rules);
 
-        $aseoPersonal = AseoPersonal::create($request->all());
+        $aseoPersonal = new AseoPersonal();
+
+        if($request->hasFile('imagen')){
+            $imagen = $request->file("imagen");
+            $imagen->move('public/img', $imagen->getClientOriginalName());
+
+            $aseoPersonal->imagen = $imagen->getClientOriginalName();
+        }
+
+        $aseoPersonal->nombreProducto = $request["nombreProducto"];
+        $aseoPersonal->descripcion = $request["descripcion"];
+        $aseoPersonal->precio = $request["precio"];
+        $aseoPersonal->codigo = $request["codigo"];
+        $aseoPersonal->save();
 
         return redirect()->route('aseoPersonal.index')
             ->with('success', 'AseoPersonal created successfully.');
