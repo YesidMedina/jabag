@@ -17,8 +17,8 @@ Route::get('/', [App\Http\Controllers\CatalogoController::class, 'index'])->name
 Route::get('/peluqueria', [App\Http\Controllers\CatalogopeluController::class, 'index'])->name('peluqueria');
 Route::get('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'index'])->name('barberia');
 Route::get('/cosmetico', [App\Http\Controllers\CatalogocosmeController::class, 'index'])->name('cosmetico');
-
-Route::get('/welcomeshow', [App\Http\Controllers\CatalogoController::class, 'index'])->name('welcomeshow');
+Route::get('/welcomeshow', [App\Http\Controllers\CatalogoController::class, 'show'])->name('welcomeshow');
+// Route::get('/welcomeshow', [App\Http\Controllers\WelcomeshowController::class, 'index'])->name('welcomeshow');
 Route::get('/aseous', [App\Http\Controllers\CatalogoaseoController::class, 'index'])->name('aseous');
 
 

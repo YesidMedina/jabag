@@ -34,7 +34,7 @@
             <img src="/public/img/{{$producto->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
             <figcaption class="d-flex align-items-center justify-content-center">
                 <h2>Details</h2>
-                <a href="photo-detail.html">Ver mas</a>
+                <a href="/welcomeshow">Ver mas</a>
             </figcaption>
         </figure>
 

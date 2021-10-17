@@ -106,6 +106,7 @@ https://templatemo.com/tm-556-catalog-z
 
                         <a class="navbar-brand" href="https://www.facebook.com/Jabag-Distribuciones-110809761279118/"><img src="img/facebook.png"  class="mb-4 img-fluid">
                         <a class="navbar-brand" href="https://instagram.com/jabag.distribuciones?utm_medium=copy_link"><img src="img/instagram.png"  class="mb-4 img-fluid">
+                        <a class="navbar-brand" href="https://wa.link/anzb62"><img src="img/instagram.png"  class="mb-4 img-fluid">
 
                     </ul>
                     <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
