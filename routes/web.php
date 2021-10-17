@@ -17,9 +17,9 @@ Route::get('/', [App\Http\Controllers\CatalogoController::class, 'index'])->name
 Route::get('/peluqueria', [App\Http\Controllers\CatalogopeluController::class, 'index'])->name('peluqueria');
 Route::get('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'index'])->name('barberia');
 Route::get('/cosmetico', [App\Http\Controllers\CatalogocosmeController::class, 'index'])->name('cosmetico');
-Route::get('/aseoPersonal', [App\Http\Controllers\CatalogoaseoController::class, 'index'])->name('aseoPersonal');
-Route::get('/welcomeshow', [App\Http\Controllers\CatalogoController::class, 'index'])->name('welcomeshow');
 
+Route::get('/welcomeshow', [App\Http\Controllers\CatalogoController::class, 'index'])->name('welcomeshow');
+Route::get('/aseous', [App\Http\Controllers\CatalogoaseoController::class, 'index'])->name('aseous');
 
 
 Route::get('/nosotros', [App\Http\Controllers\NosotrosController::class, 'index'])->name('nosotros');
@@ -30,6 +30,8 @@ Route::resource('productos', App\Http\Controllers\ProductoController::class)->mi
 Route::resource('peluquerium', App\Http\Controllers\PeluqueriumController::class)->middleware('auth');
 Route::resource('cosmeticos', App\Http\Controllers\CosmeticoController::class)->middleware('auth');
 Route::resource('barberium', App\Http\Controllers\BarberiumController::class)->middleware('auth');
-Route::resource('aseoPersonal', App\Http\Controllers\AseoPersonalController::class)->middleware('auth');
+// Route::get('register', App\Http\Controllers\Auth\RegisterController::class)->name('register');
+
+Route::resource('aseo', App\Http\Controllers\AseoController::class)->middleware('auth');
 Route::post('/image/save', 'ImageController@save')->name('image.save');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

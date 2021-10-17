@@ -22,7 +22,7 @@ class ProductoController extends Controller
         $texto=trim($request->get('texto'));
         $productos=DB::table('productos')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
         ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
-        ->paginate(5);
+        ->paginate(8);
 
         return view('producto.index', compact('productos','texto'))
             ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());

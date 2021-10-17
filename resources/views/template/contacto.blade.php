@@ -53,38 +53,36 @@
         </div>
         <div class="row tm-mb-74 tm-people-row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="img/people-1.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">Ryan White</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Chief Executive Officer</h3>
+                <img src="img/rolda.png" alt="Image" class="mb-4 img-fluid">
+                <h2 class="tm-text-primary mb-4"></h2>
+                <h3 class="tm-text-secondary h5 mb-4"></h3>
                 <p class="mb-4">
-                    Mauris ante tellus, feugiat nec metus non, bibendum semper velit. Praesent laoreet urna id tristique fermentum. Morbi venenatis dui quis diam mollis pellentesque.
+
                 </p>
 
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="img/people-2.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">Catherine Pinky</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Chief Marketing Officer</h3>
+                <img src="img/karicia.png" alt="Image" class="mb-4 img-fluid">
+                <h2 class="tm-text-primary mb-4"></h2>
+                <h3 class="tm-text-secondary h5 mb-4"></h3>
                 <p class="mb-4">
-                    Sed faucibus nec velit finibus accumsan. Sed varius augue et leo pharetra, in varius lacus eleifend. Quisque ut eleifend lacus.
                 </p>
 
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="img/people-3.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">Johnny Brief</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Accounting Executive</h3>
+                <img src="img/ossion.png" alt="Image" class="mb-4 img-fluid">
+                <h2 class="tm-text-primary mb-4"></h2>
+                <h3 class="tm-text-secondary h5 mb-4"></h3>
                 <p class="mb-4">
-                    Sed faucibus nec velit finibus accumsan. Sed varius augue et leo pharetra, in varius lacus eleifend. Quisque ut eleifend lacus.
                 </p>
 
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="img/people-4.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">George Nelson</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Creative Art Director #C69</h3>
+                <img src="img/nevada.png" alt="Image" class="mb-4 img-fluid">
+                <h2 class="tm-text-primary mb-4"></h2>
+                <h3 class="tm-text-secondary h5 mb-4"></h3>
                 <p class="mb-4">
-                    Nunc convallis facilisis congue. Curabitur gravida rutrum justo sed pulvinar. Pellentesque ac ante in erat bibendum dignissim.
+
                 </p>
 
             </div>

@@ -21,7 +21,7 @@ class PeluqueriumController extends Controller
         $texto=trim($request->get('texto'));
         $peluqueria=DB::table('peluqueria')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
         ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
-        ->paginate(5);
+        ->paginate(9);
 
 
         return view('peluquerium.index', compact('peluqueria', 'texto'))

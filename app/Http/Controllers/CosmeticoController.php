@@ -36,7 +36,7 @@ class CosmeticoController extends Controller
     public function create()
     {
         $cosmetico = new Cosmetico();
-        return view('cosmeticos.create', compact('cosmetico'));
+        return view('cosmetico.create', compact('cosmetico'));
     }
 
     /**

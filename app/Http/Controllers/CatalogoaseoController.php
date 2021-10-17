@@ -1,16 +1,28 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\AseoPersonal;
+use App\Models\Aseo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CatalogoaseoController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
-        $aseoPersonal = Aseopersonal::paginate(8);
-         return view('aseopersonal', compact('aseopersonal'));
+
+        $texto=trim($request->get('texto'));
+        $aseo=DB::table('aseos')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc');
+
+
+
+
+        $aseo = Aseo::paginate(9);
+
+
+         return view('aseous', compact('aseo'));
     }
+
 
 }

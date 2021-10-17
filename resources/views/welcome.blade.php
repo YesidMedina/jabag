@@ -5,9 +5,9 @@
 
 
 <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/negro.jpg">
-    <form class="d-flex tm-search-form">
-        <input class="form-control tm-search-input" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success tm-search-btn" type="submit">
+    <form action="{{route('welcome')}}" method="get" class="d-flex tm-search-form">
+        <input type="text" class="form-control" name="texto" value="{{$texto}}">
+        <input type="submit" class="btn btn-primary" value="Buscar">
             <i class="fas fa-search"></i>
         </button>
     </form>
@@ -15,24 +15,21 @@
 <div class="container-fluid tm-container-content tm-mt-60">
     <div class="mb-4 text-center">
         <h2 class="tm-text-primary">
-            Catálogo de prodúctos
+            Catálogo Spa de uñas
         </h2>
         <div>
-            <form action="" class="tm-text-primary">
-                Página <input type="text" value="1" size="1" class="tm-input-paging tm-text-primary"> de 200
-            </form>
-        </div>
-    </div>
 
+        </div>
+        <br>
+    </div>
 
 </div>
 
 
-
-<div class="row d-flex justify-content-center">
+<div class="row d-flex justify-content-center" >
     @foreach ($productos as $producto)
 
-    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 " style=" width: auto;">
+    <div  class="col-xl-4 col-lg-4 col-md-6 col-sm-6 " style=" width: auto" >
         <figure class="effect-ming tm-video-item">
             <img src="/public/img/{{$producto->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
             <figcaption class="d-flex align-items-center justify-content-center">
@@ -41,25 +38,63 @@
             </figcaption>
         </figure>
 
-        <div>
+        <div class="display-6" style="border-bottom: solid 1px #1A1919;">
 
-            <div class="d-flex justify-content-center tm-text-gray" >
-                <span class="tm-text-gray-light px-2 text-dark ">{{ $producto->nombreProducto }}</span>
+            <div class="d-flex justify-content-center tm-text-gray">
+                <span class="tm-text-gray-light px-1 text-dark ">{{ $producto->nombreProducto }}</span>
 
             </div>
             <div class="d-flex justify-content-center tm-text-gray">
-                <span class="tm-text-gray-light px-2 text-dark">Codigo: {{ $producto->codigo }}</span>
+                <span class="tm-text-gray-light px-1 text-dark">Codigo: {{ $producto->codigo }}</span>
             </div>
 
             <div class="d-flex justify-content-center tm-text-gray">
-                <span class="tm-text-gray-light px-2 text-dark">Precio: {{ $producto->precio }}</span>
+                <span class="tm-text-gray-light px-1 text-dark">Precio: {{ $producto->precio }}</span>
             </div>
 
-        </div>
+        </div><br><br><br>
 
-    </div>
+
+
+
+
+    </div >
 
     @endforeach
 </div>
+
+
+<div class="tm-paging d-flex">
+    <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col " >
+     <a class=" tm-btn-prev mb-2 disabled"></a>
+
+
+  <nav aria-label="">
+  <ul class="pagination" value="{{$productos}}"</ul>
+  </nav>
+
+</div>
+
+
+
+
+{{--
+            <div class="row tm-mb-90">
+            <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
+                <a href="javascript:void(0 1 2 3 4 5);" class="btn btn-primary tm-btn-prev mb-2 disabled">Anterior</a>
+                <div class="tm-paging d-flex"    value="{{$productos}}">
+                    <a href="javascript:void();" class="active tm-paging-link">1</a>
+                    <a href="javascript:void(1);" class="tm-paging-link">2</a>
+                    <a href="javascript:void(2);" class="tm-paging-link">3</a>
+                    <a href="javascript:void(3);" class="tm-paging-link">4</a>
+                </div>
+
+
+                <a href="javascript:void(1);" class="btn btn-primary tm-btn-next">Siguiente página</a>
+            </div>
+        </div>  --}}
+
+
+
 
 @endsection

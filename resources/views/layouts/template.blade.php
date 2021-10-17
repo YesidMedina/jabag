@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,28 +41,28 @@ https://templatemo.com/tm-556-catalog-z
                     <a class="nav-link nav-link-1 active" aria-current="page" href="/">Spa de uñas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2 " href="/peluqueria">Peluqueria</a>
+                    <a class="nav-link nav-link-2 active"  href="/peluqueria">Peluquería</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="/barberia">Barberia</a>
+                    <a class="nav-link nav-link-3 active" aria-current="page" href="/barberia">Barbería</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="/cosmetico">Cosmeticos</a>
+                    <a class="nav-link nav-link-4 active" aria-current="page" href="/cosmetico">Cosméticos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="/aseopersonal">Aseo personal</a>
+                    <a class="nav-link nav-link-5 active" aria-current="page" href="/aseous">Aseo personal</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="/nosotros">Nosotros</a>
+                    <a class="nav-link nav-link-6 active" aria-current="page" href="/nosotros">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="/contacto">Contacto</a>
+                    <a class="nav-link nav-link-7 active" aria-current="page" href="/contacto">Contacto</a>
                     <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="/login">login</a>
+                    <a class="nav-link nav-link-8 active" aria-current="page" href="/login">login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="/register">Register</a>
-                </li>
+                {{--  <li class="nav-item">
+                    <a class="nav-link nav-link-9 active" aria-current="page" href="/register">Register</a>
+                </li>  --}}
                 </li>
             </ul>
             </div>
@@ -73,23 +74,6 @@ https://templatemo.com/tm-556-catalog-z
 
 
 
-        <div class="row tm-mb-90 tm-gallery">
-
-
-            <div class="row tm-mb-90">
-            <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
-                <a href="javascript:void(0);" class="btn btn-primary tm-btn-prev mb-2 disabled">Anterior</a>
-                <div class="tm-paging d-flex">
-                    <a href="javascript:void(0);" class="active tm-paging-link">1</a>
-                    <a href="javascript:void(0);" class="tm-paging-link">2</a>
-                    <a href="javascript:void(0);" class="tm-paging-link">3</a>
-                    <a href="javascript:void(0);" class="tm-paging-link">4</a>
-                </div>
-
-
-                <a href="javascript:void(0);" class="btn btn-primary tm-btn-next">Siguiente página</a>
-            </div>
-        </div>
 
     </div> <!-- container-fluid, tm-container-content -->
 
@@ -100,25 +84,28 @@ https://templatemo.com/tm-556-catalog-z
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
                     <h3 class="tm-text-primary mb-4 tm-footer-title">Nuestro catálogo</h3>
-                    <p>Nuestros catálogo contiene los mejores próductos del mercado</a> ademas de manejar precios de distribucion, si deseas escribirnos para que uno de nuestros vendedores pueda visitarte, puedes darle clic al siguiente boton</p>
-                    <a href="" class="btn btn-primary tm-btn-next">  Contacto  </a>
+                    <p>Nuestro catálogo contiene los mejores productos del mercado</a> además de manejar precios de distribución, si deseas escribirnos para que uno de nuestros vendedores pueda visitarte, puedes darle clic al siguiente botón</p>
+                    <a href="/contacto" class="btn btn-primary tm-btn-next">  Contacto  </a>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
                     <h3 class="tm-text-primary mb-4 tm-footer-title">Menú</h3>
                     <ul class="tm-footer-links pl-0">
-                        <li><a href="#">Videos</a></li>
+                        <li><a href="/">Spa de uñas</a></li>
+                        <li><a href="/peluqueria">peluquería</a></li>
+                        <li><a href="/cosmetico">Cosméticos</a></li>
+                        <li><a href="/barberia">Barbería</a></li>
+                        <li><a href="/aseous">Aseo personal</a></li>
                         <li><a href="/nosotros">Nosotros</a></li>
 
-                        <li><a href="#">Contacto</a></li>
                     </ul>
                 </div>
 
 
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
                     <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
-                        <li class="mb-2"><a href=""><i class="bi bi-alarm-fill"></i></a></li>
-                        <li class="mb-2"><a href=""><i class="bi bi-twitter"></i></a></li>
-                        <li class="mb-2"><a href=""><i class="fab fa-instagram"></i></a></li>
+
+                        <a class="navbar-brand" href="https://www.facebook.com/Jabag-Distribuciones-110809761279118/"><img src="img/facebook.png"  class="mb-4 img-fluid">
+                        <a class="navbar-brand" href="https://instagram.com/jabag.distribuciones?utm_medium=copy_link"><img src="img/instagram.png"  class="mb-4 img-fluid">
 
                     </ul>
                     <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
@@ -142,5 +129,7 @@ https://templatemo.com/tm-556-catalog-z
             $('body').addClass('loaded');
         });
     </script>
+
 </body>
+
 </html>

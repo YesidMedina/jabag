@@ -27,7 +27,7 @@
                 <a class="navbar-brand" href="{{ url('/peluqueria') }}">
                 <a class="navbar-brand" href="{{ url('/cosmeticos') }}">
                  <a class="navbar-brand" href="{{ url('/barberia') }}">
-                 <a class="navbar-brand" href="{{ url('/aseopersonal') }}">
+                 <a class="navbar-brand" href="{{ url('/aseo') }}">
                  <a class="navbar-brand" href="/"><img class="logo"src="img/logojabag.jpeg" style="height:50px "/></a>
 
                 </a>
@@ -82,11 +82,21 @@
                     @if (Auth::check())
 
                     <ul class="navbar-nav mr-auto">
-                     <a class="nav-link" href="{{ route('aseoPersonal.index') }}">{{ __('Aseo personal') }}</a>
+                     <a class="nav-link" href="{{ route('aseo.index') }}">{{ __('Aseo personal') }}</a>
 
                     </ul>
 
                     @endif
+
+                    @if (Auth::check())
+
+
+                <ul class="nav-item">
+                    <a class="nav-link nav-link-9 " href="{{ route('register') }}">Register</a>
+                </ul>
+
+
+                @endif
 
 
                     <!-- Right Side Of Navbar -->
