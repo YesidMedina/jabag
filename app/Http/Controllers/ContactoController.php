@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactanosMailable;
 
 class ContactoController extends Controller
 {
@@ -34,7 +36,11 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        $correo = new ContactanosMailable($request->all());
+        Mail::to('estiven.a.martinez@gmail.com')->send($correo);
+        
+        return redirect()->route('contacto.index')->with('info','mensaje enviado');
     }
 
     /**
