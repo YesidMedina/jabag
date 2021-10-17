@@ -23,7 +23,8 @@ Route::get('/aseous', [App\Http\Controllers\CatalogoaseoController::class, 'inde
 
 
 Route::get('/nosotros', [App\Http\Controllers\NosotrosController::class, 'index'])->name('nosotros');
-Route::get('/contacto', [App\Http\Controllers\ContactoController::class, 'index'])->name('contacto');
+Route::get('/contacto', [App\Http\Controllers\ContactoController::class, 'index'])->name('contacto.index');
+Route::post('/contacto', [App\Http\Controllers\ContactoController::class, 'store'])->name('contacto.store');
 Auth::routes();
 
 Route::resource('productos', App\Http\Controllers\ProductoController::class)->middleware('auth');

@@ -14,7 +14,8 @@
         <div class="row tm-mb-50">
             <div class="col-lg-6 col-12 mb-5">
                 <h2 class="tm-text-primary mb-5">Escríbenos</h2>
-                <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
+                <form id="contact-form" action="{{Route('contacto.store')}}" method="POST" class="tm-contact-form mx-auto">
+                @csrf
                     <div class="form-group">
                         <input type="text" name="name" class="form-control rounded-0" placeholder="Nombre" required />
                     </div>
@@ -23,10 +24,10 @@
                     </div>
                     <div class="form-group">
                         <select class="form-control" id="contact-select" name="inquiry">
-                            <option value="-">Quiero que me visiten</option>
-                            <option value="sales">Reclamo</option>
-                            <option value="creative">Garantías</option>
-                            <option value="uiux">Felicitaciones</option>
+                            <option value="quiero que me visiten">Quiero que me visiten</option>
+                            <option value="reclamo">Reclamo</option>
+                            <option value="Garantias">Garantías</option>
+                            <option value="felicitaciones">Felicitaciones</option>
                         </select>
                     </div>
                     <div class="form-group">
