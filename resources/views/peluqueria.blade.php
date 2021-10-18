@@ -66,7 +66,7 @@
 
 
       <nav aria-label="">
-      <ul class="pagination" value="{{$peluqueria}}"</ul>
+      <ul class="pagination" value="{{$peluqueria}}"></ul>
       </nav>
 
     </div>

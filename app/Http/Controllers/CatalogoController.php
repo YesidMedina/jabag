@@ -24,12 +24,12 @@ class CatalogoController extends Controller
 
     }
 
-    public function show($id)
-    {
-        $producto = Producto::find($id);
+    // public function show($id)
+    // {
+    //     $producto = Producto::find($id);
 
-        return view('welcomeshow', compact('producto'));
-    }
+    //     return view('welcomeshow', compact('producto'));
+    // }
 
 
 

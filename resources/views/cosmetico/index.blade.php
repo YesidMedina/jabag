@@ -62,6 +62,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                    @if(count($cosmeticos)<=0)
+                                    <tr>
+                                        <td colspan="5">No se encontraron resultados</td>
+                                    </tr>
+
+                                    @else
                                     @foreach ($cosmeticos as $cosmetico)
                                         <tr>
                                             <td>{{ ++$i }}</td>
@@ -83,6 +90,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>

@@ -65,6 +65,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(count($productos)<=0)
+                                    <tr>
+                                        <td colspan="5">No se encontraron resultados</td>
+                                    </tr>
+
+                                    @else
                                     @foreach ($productos as $producto)
                                         <tr>
                                             <td>{{ ++$i }}</td>
@@ -92,6 +98,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>

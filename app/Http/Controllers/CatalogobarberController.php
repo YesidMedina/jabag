@@ -20,5 +20,17 @@ class CatalogobarberController extends Controller
          return view('barberia', compact('barberias', 'texto'));
     }
 
+    public function detail($id){
+
+        $barberias =DB::table("barberia")->first();
+        var_dump ($barberias);
+        die();
+
+
+
+
+
+    }
+
 }
 

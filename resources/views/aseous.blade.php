@@ -63,7 +63,7 @@
 
 
   <nav aria-label="">
-  <ul class="pagination" value="{{$aseo}}"</ul>
+  <ul class="pagination" value="{{$aseo}}"></ul>
   </nav>
 
 </div>

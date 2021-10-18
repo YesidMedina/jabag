@@ -36,10 +36,10 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-       
+
         $correo = new ContactanosMailable($request->all());
-        Mail::to('estiven.a.martinez@gmail.com')->send($correo);
-        
+        Mail::to('distribucionesjabag@gmail.com')->send($correo);
+
         return redirect()->route('contacto.index')->with('info','mensaje enviado');
     }
 
