@@ -92,7 +92,7 @@ class CosmeticoController extends Controller
     {
         $cosmetico = Cosmetico::find($id);
 
-        return view('cosmeticos.edit', compact('cosmetico'));
+        return view('cosmetico.edit', compact('cosmetico'));
     }
 
     /**

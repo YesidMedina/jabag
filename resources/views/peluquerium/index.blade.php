@@ -62,6 +62,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                    @if(count($peluqueria)<=0)
+                                    <tr>
+                                        <td colspan="5">No se encontraron resultados</td>
+                                    </tr>
+
+                                    @else
                                     @foreach ($peluqueria as $peluquerium)
                                         <tr>
                                             <td>{{ ++$i }}</td>
@@ -83,6 +90,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>

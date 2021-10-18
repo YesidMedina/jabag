@@ -22,26 +22,15 @@ class CatalogoController extends Controller
 
 
 
-        // $texto=trim($request->get('texto'));
-        // $productos=DB::table('productos')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
-        // ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc');
-
-
-        // return view('welcome', compact('productos','texto'))
-        //     ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());
-
-
-
-
-
-
-
-
-        // $productos = Producto::paginate(5);
-
-
-        //  return view('welcome', compact('productos'));
     }
+
+    // public function show($id)
+    // {
+    //     $producto = Producto::find($id);
+
+    //     return view('welcomeshow', compact('producto'));
+    // }
+
 
 
 }

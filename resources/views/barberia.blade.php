@@ -34,7 +34,9 @@
                 <img src="/public/img/{{$barberium->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
                 <figcaption class="d-flex align-items-center justify-content-center">
                     <h2>Details</h2>
+
                     <a href="{{ action('App\Http\Controllers\CatalogobarberController@detailbarber',['id' => $barberium->id]) }}" ></a>
+
                 </figcaption>
             </figure>
 
@@ -65,7 +67,7 @@
 
 
       <nav aria-label="">
-      <ul class="pagination" value="{{$barberias}}"</ul>
+      <ul class="pagination" value="{{$barberias}}"></ul>
       </nav>
 
     </div>

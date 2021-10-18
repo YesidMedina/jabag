@@ -71,7 +71,7 @@
 
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="img/ossion.png" alt="Image" class="mb-4 img-fluid">
+                <img src="img/ossion.png" alt="Image" class="mb-6 img-fluid">
                 <h2 class="tm-text-primary mb-4"></h2>
                 <h3 class="tm-text-secondary h5 mb-4"></h3>
                 <p class="mb-4">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Aseo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Class AseoController
@@ -16,12 +17,16 @@ class AseoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $aseos = Aseo::paginate();
+        $texto=trim($request->get('texto'));
+        $aseos=DB::table('aseos')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->orderBy('nombreProducto', 'asc')
+        ->paginate(8);
 
-        return view('aseo.index', compact('aseos'))
+        return view('aseo.index', compact('aseos','texto'))
             ->with('i', (request()->input('page', 1) - 1) * $aseos->perPage());
+
     }
 
     /**

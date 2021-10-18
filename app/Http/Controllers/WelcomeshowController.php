@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\ContactanosMailable;
+use App\Models\Producto;
 
-class ContactoController extends Controller
+class WelcomeshowController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class ContactoController extends Controller
      */
     public function index()
     {
-        return view('template.contacto');
+        return view('welcomeshow');
     }
 
     /**
@@ -25,7 +24,7 @@ class ContactoController extends Controller
      */
     public function create()
     {
-        return view('template.contacto');
+        return view('welcomeshow');
     }
 
     /**
@@ -36,11 +35,7 @@ class ContactoController extends Controller
      */
     public function store(Request $request)
     {
-
-        $correo = new ContactanosMailable($request->all());
-        Mail::to('distribucionesjabag@gmail.com')->send($correo);
-
-        return redirect()->route('contacto.index')->with('info','mensaje enviado');
+        //
     }
 
     /**
@@ -51,8 +46,9 @@ class ContactoController extends Controller
      */
     public function show($id)
     {
-        //dd($id);
-        return view('template.contacto');
+        $producto = Producto::find($id);
+
+        return view('welcomeshow', compact('producto'));;
     }
 
     /**

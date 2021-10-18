@@ -29,5 +29,17 @@ class CatalogobarberController extends Controller
     
     }
 
+    public function detail($id){
+
+        $barberias =DB::table("barberia")->first();
+        var_dump ($barberias);
+        die();
+
+
+
+
+
+    }
+
 }
 

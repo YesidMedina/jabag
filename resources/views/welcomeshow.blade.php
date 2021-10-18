@@ -1,7 +1,7 @@
 @extends('layouts.template')
 
 @section('template_title')
-    {{ $producto->name ?? 'Show Producto' }}
+    {{ $producto->name ?? 'Show welcomeshow' }}
 @endsection
 
 
@@ -17,7 +17,7 @@
                             <span class="card-title">Detalle del Producto</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('welcome') }}"> Atras</a>
+                            <a class="btn btn-primary" href="{{ route('welcomeshow') }}"> Atras</a>
                         </div>
                     </div>
 
@@ -33,19 +33,19 @@
                         </div>
                         <div class="form-group">
                             <strong>Precio:</strong>
-                            {{ $producto->precio }}
+                            {{--  {{ $producto->precio }}  --}}
                         </div>
                         <div class="form-group">
 
-                        <img src="/uploads/{{$producto->imagen }}" alt="">
+                        {{--  <img src="/public/img/{{$producto->imagen }}"alt="">  --}}
                             <strong>Imagen:</strong>
-                            
+
 
                         </div>
 
                         <div class="form-group">
                             <strong>Codigo:</strong>
-                            {{ $producto->codigo }}
+                            {{--  {{ $producto->codigo }}  --}}
                         </div>
 
                     </div>

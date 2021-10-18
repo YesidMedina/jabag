@@ -62,6 +62,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(count($barberia)<=0)
+                                    <tr>
+                                        <td colspan="5">No se encontraron resultados</td>
+                                    </tr>
+
+                                    @else
                                     @foreach ($barberia as $barberium)
                                         <tr>
                                             <td>{{ ++$i }}</td>
@@ -83,6 +89,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>

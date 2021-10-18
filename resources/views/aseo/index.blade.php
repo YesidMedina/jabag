@@ -16,6 +16,25 @@
                                 {{ __('Aseo') }}
                             </span>
 
+                            <form action="{{route('aseo.index')}}" method="get">
+
+                                <div class="form-row">
+
+                                <div class="col-sm-6">
+                                <input type="text" class="form-control" name="texto" value="{{$texto}}">
+                                </div>
+                                <div class="col-auto">
+                                <input type="submit" class="btn btn-primary" value="Buscar">
+
+
+                                </div>
+                                </div>
+
+                                </form>
+
+
+
+
                              <div class="float-right">
                                 <a href="{{ route('aseo.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
@@ -46,6 +65,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @if(count($aseos)<=0)
+                                    <tr>
+                                        <td colspan="5">No se encontraron resultados</td>
+                                    </tr>
+
+                                    @else
                                     @foreach ($aseos as $aseo)
                                         <tr>
                                             <td>{{ ++$i }}</td>
@@ -67,6 +92,7 @@
                                             </td>
                                         </tr>
                                     @endforeach
+                                    @endif
                                 </tbody>
                             </table>
                         </div>
