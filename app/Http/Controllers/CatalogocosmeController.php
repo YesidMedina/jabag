@@ -19,4 +19,11 @@ class CatalogocosmeController extends Controller
          return view('cosmetico', compact('cosmeticos'));
     }
 
+    public function detailcosmetico($id=null){
+        $cosmetico = DB::table('cosmeticos')->where('id',$id)->first();
+        
+        return view ('detalle.detailcosmetico',compact('cosmetico'));
+    
+    }
+
 }

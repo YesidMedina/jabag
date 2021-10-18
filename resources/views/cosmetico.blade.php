@@ -33,7 +33,7 @@
                 <img src="/public/img/{{$cosmetico->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
                 <figcaption class="d-flex align-items-center justify-content-center">
                     <h2>Details</h2>
-                    <a href="photo-detail.html">Ver mas</a>
+                    <a href="{{ action('App\Http\Controllers\CatalogocosmeController@detailcosmetico',['id' => $cosmetico->id]) }}" ></a>
                 </figcaption>
             </figure>
 
@@ -65,7 +65,7 @@
 
 
       <nav aria-label="">
-      <ul class="pagination" value="{{$cosmeticos}}"</ul>
+      <ul class="pagination" value="{{$cosmeticos}}"></ul>
       </nav>
 
     </div>

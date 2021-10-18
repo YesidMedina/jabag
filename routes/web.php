@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Auth;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/pr/pr1',function(){
+return view ('prueba');
+});
+Route::get('/detailbarber/{id?}', [App\Http\Controllers\CatalogobarberController::class, 'detailbarber'])->name('barberia.detailbarber');
+Route::get('/detailcosmetico/{id?}', [App\Http\Controllers\CatalogocosmeController::class, 'detailcosmetico'])->name('cosmetico.detailcosmetico');
 Route::get('/', [App\Http\Controllers\CatalogoController::class, 'index'])->name('welcome');
 Route::get('/peluqueria', [App\Http\Controllers\CatalogopeluController::class, 'index'])->name('peluqueria');
 Route::get('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'index'])->name('barberia');

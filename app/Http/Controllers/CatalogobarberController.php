@@ -19,6 +19,15 @@ class CatalogobarberController extends Controller
         $barberias = Barberium::paginate(9);
          return view('barberia', compact('barberias', 'texto'));
     }
+    
+    public function detailbarber($id=null){
+        $barberia = DB::table('barberia')->where('id',$id)->first();
+        //  return view ('detailbarberia',[
+        //      'barberia'=> $barberia
+        //  ]);
+        return view ('detalle.detailbarberia',compact('barberia'));
+    
+    }
 
 }
 
