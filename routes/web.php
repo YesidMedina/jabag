@@ -19,7 +19,10 @@ Route::get('/detailbarber/{id?}', [App\Http\Controllers\CatalogobarberController
 Route::get('/detailcosmetico/{id?}', [App\Http\Controllers\CatalogocosmeController::class, 'detailcosmetico'])->name('cosmetico.detailcosmetico');
 Route::get('/', [App\Http\Controllers\CatalogoController::class, 'index'])->name('welcome');
 Route::get('/peluqueria', [App\Http\Controllers\CatalogopeluController::class, 'index'])->name('peluqueria');
-Route::get('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'index'])->name('barberia');
+Route::get('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'index'])->name('barberia.index');
+Route::post('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'store'])->name('barberia.store');
+
+
 Route::get('/cosmetico', [App\Http\Controllers\CatalogocosmeController::class, 'index'])->name('cosmetico');
 // Route::get('/welcomeshow', [App\Http\Controllers\CatalogoController::class, 'show'])->name('welcomeshow');
 // Route::get('/welcomeshow', [App\Http\Controllers\WelcomeshowController::class, 'index'])->name('welcomeshow');

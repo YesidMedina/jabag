@@ -29,17 +29,28 @@ class CatalogobarberController extends Controller
     
     }
 
-    public function detail($id){
+    public function store(Request $request){
+        
+        //$barberia = DB::table('barberia')->where('nombreProducto',$request['texto'])->first();
 
-        $barberias =DB::table("barberia")->first();
-        var_dump ($barberias);
-        die();
+        $texto=trim($request->get('texto'));
+        
+        $barberia=DB::table('barberia')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->get();
+        
+        // var_dump($barberia);
+        // die();
+       
+        
+        // return redirect()->route('barberia.index',array(
+        //    'texto'=> $barberia,
+        //    'buscar'=>'barberia',
+        //    'texto'=> $barberia
+        // ))->with('info','mensaje enviado');
 
-
-
-
-
+     return  view ('barberia',compact('barberia'));
     }
+   
 
 }
 
