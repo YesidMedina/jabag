@@ -4,11 +4,12 @@
 @section('content')
 
 <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/negro.jpg">
-    <form action="{{route('aseous')}}" method="get" class="d-flex tm-search-form">
-        <input type="text" class="form-control" name="texto" value="">
+    <form action="{{Route('aseo.store')}}" method="POST" class="d-flex tm-search-form">
+        @csrf
+        <input type="text" class="form-control" name="texto" >
         <input type="submit" class="btn btn-primary" value="Buscar">
-            <i class="fas fa-search"></i>
-        </button>
+
+
     </form>
 </div>
 <div class="container-fluid tm-container-content tm-mt-60">
@@ -32,7 +33,7 @@
                 <img src="/public/img/{{$aseo->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
                 <figcaption class="d-flex align-items-center justify-content-center">
                     <h2>Details</h2>
-                    <a href="photo-detail.html">Ver mas</a>
+                    <a href="{{ action('App\Http\Controllers\CatalogoaseoController@detailaseo',['id' => $aseo->id]) }}" >Ver mas</a>
                 </figcaption>
             </figure>
 
@@ -43,11 +44,11 @@
 
                 </div>
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark">Codigo: {{ $aseo->codigo }}</span>
+                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(60, 25, 218)">Codigo:</a>  {{ $aseo->codigo }}</span>
                 </div>
 
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark">Precio: {{ $aseo->precio }}</span>
+                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(60, 25, 218)">Precio:</a> {{ $aseo->precio }}</span>
                 </div>
 
             </div><br><br><br>

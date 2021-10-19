@@ -16,7 +16,8 @@
                         <span class="card-title">Update Producto</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('productos.update', $producto->id) }}"  role="form" enctype="multipart/form-data">
+                        
+                        <form method="POST" action="{{ route('productos.update', $producto->id) }}"  role="form" enctype="multipart/form-data" >
                             {{ method_field('PATCH') }}
                             @csrf
 

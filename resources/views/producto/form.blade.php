@@ -17,6 +17,7 @@
             {!! $errors->first('precio', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
+            <form label="imagen" src="/public/img/{{$producto->imagen}}" alt="Image" >
             <form action="$producto->imagen" method="post" enctype="multipart/form-data">
                 <input type="file" name="imagen">
         </div>

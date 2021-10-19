@@ -4,11 +4,12 @@
 @section('content')
 
 <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/negro.jpg">
-    <form action="{{route('peluqueria')}}" method="get" class="d-flex tm-search-form">
-        <input type="text" class="form-control" name="texto" value="">
+    <form action="{{Route('peluqueria.store')}}" method="POST" class="d-flex tm-search-form">
+        @csrf
+        <input type="text" class="form-control" name="texto" >
         <input type="submit" class="btn btn-primary" value="Buscar">
-            <i class="fas fa-search"></i>
-        </button>
+
+
     </form>
 </div>
 <div class="container-fluid tm-container-content tm-mt-60">
@@ -35,7 +36,7 @@
                 <img src="/public/img/{{$peluquerium->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
                 <figcaption class="d-flex align-items-center justify-content-center">
                     <h2>Details</h2>
-                    <a href="photo-detail.html">Ver mas</a>
+                    <a href="{{ action('App\Http\Controllers\CatalogopeluController@detailpeluqueria',['id' => $peluquerium->id]) }}">Ver mas</a>
                 </figcaption>
             </figure>
 
@@ -46,11 +47,11 @@
 
                 </div>
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-1 text-dark">Codigo: {{ $peluquerium->codigo }}</span>
+                    <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(240, 71, 20)">Codigo:</a> {{ $peluquerium->codigo }}</span>
                 </div>
 
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-1 text-dark">Precio: {{ $peluquerium->precio }}</span>
+                    <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(240, 71, 20)">Precio:</a>{{ $peluquerium->precio }}</span>
                 </div>
 
             </div><br><br><br>

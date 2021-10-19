@@ -15,13 +15,20 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/pr/pr1',function(){
 return view ('prueba');
 });
+
+Route::get('/detailproductos/{id?}', [App\Http\Controllers\CatalogoController::class, 'detailproductos'])->name('producto.detailproductos');
+Route::get('/detailpeluqueria/{id?}', [App\Http\Controllers\CatalogopeluController::class, 'detailpeluqueria'])->name('peluqueria.detailpeluqueria');
+Route::get('/detailaseo/{id?}', [App\Http\Controllers\CatalogoaseoController::class, 'detailaseo'])->name('aseo.detailaseo');
 Route::get('/detailbarber/{id?}', [App\Http\Controllers\CatalogobarberController::class, 'detailbarber'])->name('barberia.detailbarber');
 Route::get('/detailcosmetico/{id?}', [App\Http\Controllers\CatalogocosmeController::class, 'detailcosmetico'])->name('cosmetico.detailcosmetico');
 Route::get('/', [App\Http\Controllers\CatalogoController::class, 'index'])->name('welcome');
 Route::get('/peluqueria', [App\Http\Controllers\CatalogopeluController::class, 'index'])->name('peluqueria');
 Route::get('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'index'])->name('barberia.index');
 Route::post('/barberia', [App\Http\Controllers\CatalogobarberController::class, 'store'])->name('barberia.store');
-
+Route::post('/peluqueria', [App\Http\Controllers\CatalogopeluController::class, 'store'])->name('peluqueria.store');
+Route::post('/', [App\Http\Controllers\CatalogoController::class, 'store'])->name('producto.store');
+Route::post('/cosmetico', [App\Http\Controllers\CatalogocosmeController::class, 'store'])->name('cosmetico.store');
+Route::post('/aseous', [App\Http\Controllers\CatalogoaseoController::class, 'store'])->name('aseo.store');
 
 Route::get('/cosmetico', [App\Http\Controllers\CatalogocosmeController::class, 'index'])->name('cosmetico');
 // Route::get('/welcomeshow', [App\Http\Controllers\CatalogoController::class, 'show'])->name('welcomeshow');

@@ -19,5 +19,36 @@ class CatalogopeluController extends Controller
          return view('peluqueria', compact('peluqueria'));
     }
 
+    public function detailpeluqueria($id=null){
+        $peluqueria = DB::table('peluqueria')->where('id',$id)->first();
+        //  return view ('detailbarberia',[
+        //      'barberia'=> $barberia
+        //  ]);
+        return view ('detalle.detailpeluqueria',compact('peluqueria'));
+
+    }
+
+    public function store(Request $request){
+
+        //$barberia = DB::table('barberia')->where('nombreProducto',$request['texto'])->first();
+
+        $texto=trim($request->get('texto'));
+
+        $peluqueria=DB::table('peluqueria')->select('id', 'nombreProducto', 'codigo', 'precio', 'descripcion', 'imagen')->where('nombreProducto', 'LIKE','%'.$texto. '%')
+        ->orWhere('codigo', 'LIKE','%'.$texto. '%')->get();
+
+        // var_dump($barberia);
+        // die();
+
+
+        // return redirect()->route('barberia.index',array(
+        //    'texto'=> $barberia,
+        //    'buscar'=>'barberia',
+        //    'texto'=> $barberia
+        // ))->with('info','mensaje enviado');
+
+     return  view ('peluqueria',compact('peluqueria'));
+
 }
 
+}

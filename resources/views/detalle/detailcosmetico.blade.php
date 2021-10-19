@@ -62,49 +62,42 @@ https://templatemo.com/tm-556-catalog-z
     </nav>
     <br>
     <br>
-    <div class=" d-flex justify-content-center align-items-center">
-
-        <h1>Detalle Del Producto {{$cosmetico->nombreProducto}}</h1>
-    </div>
     <br>
     <br>
-    <div class="tm-hero d-flex justify-content-center align-items-center" >
 
-
-
-
-        <div class=" row d-flex justify-content-center " style=" width: auto; margin-bottom: 50px;">
-
-            <div class="col-6" style="width: 400px;">
-             <img src="../../public/img/{{$cosmetico->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
-            </div>
-
-
-            <div class="col-6 justify-content-center" style="border-bottom: solid 1px #1A1919; font-size:50px;">
-
-                <div class="justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark ">{{ $cosmetico->nombreProducto }}</span>
-
-                </div>
-                <div class="justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark">Codigo: {{ $cosmetico->codigo }}</span>
-                </div>
-
-                <div class="justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark">Precio: {{ $cosmetico->precio }}</span>
-                </div>
-
-                <div class="justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark">Descripcion: {{ $cosmetico->descripcion }}</span>
-                </div>
-
-
-            </div><br><br><br>
-
+    <div style="align-content: center" class="row tm-mb-90">
+        <div class="col-6" style="width: 600px;">
+            <img src="../../public/img/{{$cosmetico->imagen }}" alt="Image" class="img-fluid">
         </div>
+        <div class="col-6 justify-content-center" style="border-bottom: solid 1px #1A1919; font-size:40px;">
+            <div class="tm-bg-gray tm-video-details">
+
+                <div class="text-center mb-5">
+                    <a href="/cosmetico" class="btn btn-primary tm-btn-big">Atrás</a>
+                </div>
 
 
 
+                <h1 class=" d-flex justify-content-center align-items-center">
+                    {{$cosmetico->nombreProducto}}
+                </h1><br>
+
+                <div class="mb-4 d-flex flex-wrap">
+                    <div class="mr-4 mb-2">
+                        <span class="">Precio: </span><span class="tm-text-primary">{{ $cosmetico->precio }}</span>
+                    </div>
+                    <div class="mr-4 mb-2">
+                        <span class="">Codigo: </span><span class="tm-text-primary">{{ $cosmetico->codigo }}</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <span class="">Descripcion:</span>
+                    <p>{{ $cosmetico->descripcion }}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
     </div> <!-- container-fluid, tm-container-content -->

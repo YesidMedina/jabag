@@ -8,8 +8,8 @@
         @csrf
         <input type="text" class="form-control" name="texto" >
         <input type="submit" class="btn btn-primary" value="Buscar">
-          
-        
+
+
     </form>
 </div>
 <div class="container-fluid tm-container-content tm-mt-60">
@@ -28,7 +28,9 @@
 
     @if(!isset($barberia))
     <div class="row d-flex justify-content-center  ">
-        
+
+
+
         @foreach ($barberias as $barberium)
 
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  " style=" width: auto; margin-bottom: 50px;">
@@ -49,11 +51,11 @@
 
                 </div>
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark">Codigo: {{ $barberium->codigo }}</span>
+                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(30, 202, 53)">Codigo:</a>{{ $barberium->codigo }}</span>
                 </div>
 
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark">Precio: {{ $barberium->precio }}</span>
+                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(30, 202, 53)">Precio:</a> {{ $barberium->precio }}</span>
                 </div>
 
             </div><br><br><br>
@@ -61,7 +63,8 @@
         </div>
 
         @endforeach
-       
+
+
       </div>
       <div class="tm-paging d-flex">
         <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col " >
@@ -75,7 +78,7 @@
     </div>
       @else
       <div class="row d-flex justify-content-center  ">
-        
+
         @foreach ($barberia as $barberium)
 
         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6  " style=" width: auto; margin-bottom: 50px;">
@@ -108,8 +111,8 @@
         </div>
 
       @endforeach
-     
+
         @endif
 
-    
+
     @endsection

@@ -5,11 +5,12 @@
 
 
 <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/negro.jpg">
-    <form action="{{route('welcome')}}" method="get" class="d-flex tm-search-form">
-        <input type="text" class="form-control" name="texto" value="{{$texto}}">
+    <form action="{{Route('producto.store')}}" method="POST" class="d-flex tm-search-form">
+        @csrf
+        <input type="text" class="form-control" name="texto" >
         <input type="submit" class="btn btn-primary" value="Buscar">
-            <i class="fas fa-search"></i>
-        </button>
+
+
     </form>
 </div>
 <div class="container-fluid tm-container-content tm-mt-60">
@@ -27,6 +28,8 @@
 
 
 <div class="row d-flex justify-content-center" >
+
+
     @foreach ($productos as $producto)
 
     <div  class="col-xl-4 col-lg-4 col-md-6 col-sm-6 " style=" width: auto" >
@@ -34,7 +37,7 @@
             <img src="/public/img/{{$producto->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
             <figcaption class="d-flex align-items-center justify-content-center">
                 <h2>Details</h2>
-                <a href="/welcomeshow">Ver mas</a>
+                <a href="{{ action('App\Http\Controllers\CatalogoController@detailproductos',['id' => $producto->id]) }}">Ver mas</a>
             </figcaption>
         </figure>
 
@@ -45,11 +48,11 @@
 
             </div>
             <div class="d-flex justify-content-center tm-text-gray">
-                <span class="tm-text-gray-light px-1 text-dark">Codigo: {{ $producto->codigo }}</span>
+                <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(25, 173, 218)">Codigo:</a> {{ $producto->codigo }}</span>
             </div>
 
             <div class="d-flex justify-content-center tm-text-gray">
-                <span class="tm-text-gray-light px-1 text-dark">Precio: {{ $producto->precio }}</span>
+                <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(25, 173, 218)">Precio:</a>{{ $producto->precio }}</span>
             </div>
 
         </div><br><br><br>
@@ -61,6 +64,7 @@
     </div >
 
     @endforeach
+
 </div>
 
 
@@ -72,6 +76,7 @@
   <nav aria-label="">
   <ul class="pagination" value="{{$productos}}"></ul>
   </nav>
+
 
 
 

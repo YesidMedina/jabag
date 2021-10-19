@@ -67,38 +67,37 @@ https://templatemo.com/tm-556-catalog-z
 
     <div style="align-content: center" class="row tm-mb-90">
         <div class="col-6" style="width: 600px;">
-            <img src="../../public/img/{{$barberia->imagen }}" alt="Image" class="img-fluid">
+            <img src="../../public/img/{{$producto->imagen }}" alt="Image" class="img-fluid">
         </div>
         <div class="col-6 justify-content-center" style="border-bottom: solid 1px #1A1919; font-size:40px;">
             <div class="tm-bg-gray tm-video-details">
 
                 <div class="text-center mb-5">
-                    <a href="/barberia" class="btn btn-primary tm-btn-big">Atrás</a>
+                    <a href="/" class="btn btn-primary tm-btn-big">Atrás</a>
                 </div>
 
 
 
                 <h1 class=" d-flex justify-content-center align-items-center">
-                    {{$barberia->nombreProducto}}
+                    {{$producto->nombreProducto}}
                 </h1><br>
 
                 <div class="mb-4 d-flex flex-wrap">
                     <div class="mr-4 mb-2">
-                        <span class="">Precio: </span><span class="tm-text-primary">{{ $barberia->precio }}</span>
+                        <span class="">Precio: </span><span class="tm-text-primary">{{ $producto->precio }}</span>
                     </div>
                     <div class="mr-4 mb-2">
-                        <span class="">Codigo: </span><span class="tm-text-primary">{{ $barberia->codigo }}</span>
+                        <span class="">Codigo: </span><span class="tm-text-primary">{{ $producto->codigo }}</span>
                     </div>
                 </div>
                 <div class="mb-4">
                     <span class="">Descripcion:</span>
-                    <p>{{ $barberia->descripcion }}</p>
+                    <p>{{ $producto->descripcion }}</p>
                 </div>
 
             </div>
         </div>
     </div>
-
 
 
 
