@@ -51,7 +51,7 @@
 
                 </div>
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(30, 202, 53)">Codigo:</a>{{ $barberium->codigo }}</span>
+                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(30, 202, 53)">Código:</a>{{ $barberium->codigo }}</span>
                 </div>
 
                 <div class="d-flex justify-content-center tm-text-gray">

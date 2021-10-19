@@ -45,7 +45,7 @@
 
                 </div>
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(218, 25, 170)">Codigo:</a>{{ $cosmetico->codigo }}</span>
+                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(218, 25, 170)">Código:</a>{{ $cosmetico->codigo }}</span>
                 </div>
 
                 <div class="d-flex justify-content-center tm-text-gray">

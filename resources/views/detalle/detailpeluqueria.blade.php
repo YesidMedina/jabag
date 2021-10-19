@@ -87,11 +87,11 @@ https://templatemo.com/tm-556-catalog-z
                         <span class="">Precio: </span><span class="tm-text-primary">{{ $peluqueria->precio }}</span>
                     </div>
                     <div class="mr-4 mb-2">
-                        <span class="">Codigo: </span><span class="tm-text-primary">{{ $peluqueria->codigo }}</span>
+                        <span class="">Código: </span><span class="tm-text-primary">{{ $peluqueria->codigo }}</span>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <span class="">Descripcion:</span>
+                    <span class="">Descripción:</span>
                     <p>{{ $peluqueria->descripcion }}</p>
                 </div>
 

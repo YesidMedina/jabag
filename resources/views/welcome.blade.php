@@ -48,7 +48,7 @@
 
             </div>
             <div class="d-flex justify-content-center tm-text-gray">
-                <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(25, 173, 218)">Codigo:</a> {{ $producto->codigo }}</span>
+                <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(25, 173, 218)">Código:</a> {{ $producto->codigo }}</span>
             </div>
 
             <div class="d-flex justify-content-center tm-text-gray">
