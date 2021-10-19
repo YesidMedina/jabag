@@ -7,6 +7,8 @@
             <div class="card">
                 <div class="card-header">{{ __('Página principal de administrador.') }}</div>
 
+                <a class="navbar-brand" href=""><img class="logo"src="img/admin.png" style="height:400px "/></a>
+
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
