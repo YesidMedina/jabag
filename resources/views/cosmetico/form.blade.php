@@ -17,8 +17,10 @@
             {!! $errors->first('precio', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            <form action="$cosmetico->imagen" method="post" enctype="multipart/form-data">
-                <input type="file" name="imagen">
+            {{ Form::label('imagen') }}
+            {{ Form::file('imagen', $cosmetico->imagen, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
+            {!! $errors->first('imagen', '<div class="invalid-feedback">:message</p>') !!}
+
         </div>
         <div class="form-group">
             {{ Form::label('codigo') }}

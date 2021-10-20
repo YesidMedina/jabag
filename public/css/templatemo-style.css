@@ -705,3 +705,20 @@ a .effect-ming .tm-video-item img{
 
 }
 
+.fontana{
+
+display: flex;
+ justify-content:center;
+ width: 1000px;
+ height: 300px;
+margin:0 auto;
+
+}
+
+.fondo{
+    display: flex;
+    justify-content:center;
+    border-bottom: solid 1px #1A1919;
+     font-size:25px;
+}
+

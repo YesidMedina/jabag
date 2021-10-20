@@ -41,7 +41,7 @@ https://templatemo.com/tm-556-catalog-z
             <div style="background-attachment: fixed;" class="collapse navbar-collapse navar" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-5 mb-lg-2">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-1 active" aria-current="page" href="/">Spa de uñas</a>
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="/">Spa y uñas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link nav-link-2 active"  href="/peluqueria">Peluquería</a>
@@ -93,7 +93,7 @@ https://templatemo.com/tm-556-catalog-z
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
                     <h3 class="tm-text-primary mb-4 tm-footer-title">Menú</h3>
                     <ul class="tm-footer-links pl-0">
-                        <li><a href="/">Spa de uñas</a></li>
+                        <li><a href="/">Spa y uñas</a></li>
                         <li><a href="/peluqueria">peluquería</a></li>
                         <li><a href="/cosmetico">Cosméticos</a></li>
                         <li><a href="/barberia">Barbería</a></li>

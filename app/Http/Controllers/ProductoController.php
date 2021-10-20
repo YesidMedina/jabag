@@ -93,11 +93,7 @@ class ProductoController extends Controller
     public function edit($id)
     {
         $producto = Producto::find($id);
-
-       
-
-
-
+        
         return view('producto.edit', compact('producto'));
     }
 

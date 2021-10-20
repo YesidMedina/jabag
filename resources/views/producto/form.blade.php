@@ -17,15 +17,16 @@
             {!! $errors->first('precio', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            <form label="imagen" src="/public/img/{{$producto->imagen}}" alt="Image" >
-            <form action="$producto->imagen" method="post" enctype="multipart/form-data">
-                <input type="file" name="imagen">
+            {{ Form::label('imagen') }}
+            {{ Form::file('imagen', $producto->imagen, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
+            {!! $errors->first('imagen', '<div class="invalid-feedback">:message</p>') !!}
+
         </div>
         <div class="form-group">
             {{ Form::label('codigo') }}
             {{ Form::text('codigo', $producto->codigo, ['class' => 'form-control' . ($errors->has('codigo') ? ' is-invalid' : ''), 'placeholder' => 'Codigo']) }}
             {!! $errors->first('codigo', '<div class="invalid-feedback">:message</p>') !!}
-
+                @csrf
         </div>
 
     </div>

@@ -17,8 +17,9 @@
             {!! $errors->first('precio', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            <form action="$barberium->imagen" method="post" enctype="multipart/form-data">
-                <input type="file" name="imagen">
+            {{ Form::label('imagen') }}
+            {{ Form::file('imagen', $barberium->precio, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
+            {!! $errors->first('imagen', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('codigo') }}

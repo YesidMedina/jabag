@@ -52,7 +52,7 @@
             </div>
 
             <div class="d-flex justify-content-center tm-text-gray">
-                <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(25, 173, 218)">Precio:</a>{{ $producto->precio }}</span>
+                <span class="tm-text-gray-light px-1 text-dark"><a style="color:rgb(25, 173, 218)">Precio:</a> {{ $producto->precio }}<sup> COP</sup></span>
             </div>
 
         </div><br><br><br>

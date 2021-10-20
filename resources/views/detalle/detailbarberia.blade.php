@@ -66,10 +66,10 @@ https://templatemo.com/tm-556-catalog-z
     <br>
 
     <div style="align-content: center" class="row tm-mb-90">
-        <div class="col-6" style="width: 600px;">
-            <img src="../../public/img/{{$barberia->imagen }}" alt="Image" class="img-fluid">
+        <div class="fontana">
+           <img src="../../public/img/{{$barberia->imagen }}" alt="Image" class="img-fluid">
         </div>
-        <div class="col-6 justify-content-center" style="border-bottom: solid 1px #1A1919; font-size:40px;">
+        <div class="fondo">
             <div class="tm-bg-gray tm-video-details">
 
                 <div class="text-center mb-5">
@@ -82,17 +82,17 @@ https://templatemo.com/tm-556-catalog-z
                     {{$barberia->nombreProducto}}
                 </h1><br>
 
-                <div class="mb-4 d-flex flex-wrap">
+                <div class="d-flex justify-content-center align-items-center">
                     <div class="mr-4 mb-2">
-                        <span class="">Precio: </span><span class="tm-text-primary">{{ $barberia->precio }}</span>
+                        <span class="d-flex justify-content-center align-items-center">Precio: </span><span class="tm-text-primary">{{ $barberia->precio }}<sup> COP</sup></span>
                     </div>
                     <div class="mr-4 mb-2">
-                        <span class="">Código: </span><span class="tm-text-primary">{{ $barberia->codigo }}</span>
+                        <span class="d-flex justify-content-center align-items-center">Código: </span><span class="tm-text-primary">{{ $barberia->codigo }}</span>
                     </div>
                 </div>
                 <div class="mb-4">
-                    <span class="">Descripción:</span>
-                    <p>{{ $barberia->descripcion }}</p>
+                    <span class="d-flex justify-content-center align-items-center">Descripción:</span>
+                    <font face="georgia" size="4px;">{{ $barberia->descripcion }}</font>
                 </div>
 
             </div>

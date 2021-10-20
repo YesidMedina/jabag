@@ -78,11 +78,7 @@
 											<td>{{ $producto->nombreProducto }}</td>
 											<td>{{ $producto->descripcion }}</td>
 											<td>{{ $producto->precio }}</td>
-
-
-
                                             <td> <img height="50" src="/public/img/{{$producto->imagen}}" alt="Image" > </td>
-
                                             <td>{{ $producto->codigo }}</td>
 
 
