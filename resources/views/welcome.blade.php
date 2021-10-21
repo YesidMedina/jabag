@@ -36,7 +36,7 @@
         <figure class="effect-ming tm-video-item">
             <img src="/public/img/{{$producto->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
             <figcaption class="d-flex align-items-center justify-content-center">
-                <h2>Details</h2>
+                <h2>Ver</h2>
                 <a href="{{ action('App\Http\Controllers\CatalogoController@detailproductos',['id' => $producto->id]) }}">Ver mas</a>
             </figcaption>
         </figure>

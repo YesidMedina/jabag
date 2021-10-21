@@ -65,6 +65,7 @@ class ProductoController extends Controller
         $producto->codigo = $request["codigo"];
         $producto->save();
 
+
         return redirect()->route('productos.index')
             ->with('success', 'Producto created successfully.');
 
@@ -93,8 +94,12 @@ class ProductoController extends Controller
     public function edit($id)
     {
         $producto = Producto::find($id);
-        
+
+
+
+
         return view('producto.edit', compact('producto'));
+
     }
 
     /**
@@ -109,6 +114,8 @@ class ProductoController extends Controller
         request()->validate(Producto::$rules);
 
         $producto->update($request->all());
+
+
 
         return redirect()->route('productos.index')
             ->with('success', 'Producto updated successfully');

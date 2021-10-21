@@ -16,9 +16,11 @@
                         <span class="card-title">Update Aseo</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('aseo.update', $aseo->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
+                        <form method="POST" action="{{ route('aseo.update', $aseo->id) }}">
+
                             @csrf
+
+                            @method('PUT')
 
                             @include('aseo.form')
 

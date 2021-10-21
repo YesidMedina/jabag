@@ -34,7 +34,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Imagen:</strong>
-                            <img height="400" src="/public/img/{{$producto->imagen }}" alt="">
+                            <img height="400" src="/public/img/{{$producto->imagen }}" role="form" enctype="multipart/form-data" >
                         </div>
 
                         <div class="form-group">

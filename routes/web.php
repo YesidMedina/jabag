@@ -50,3 +50,5 @@ Route::resource('barberium', App\Http\Controllers\BarberiumController::class)->m
 Route::resource('aseo', App\Http\Controllers\AseoController::class)->middleware('auth');
 Route::post('/image/save', 'ImageController@save')->name('image.save');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/producto', [App\Http\Controllers\ProductoController::class, 'edit'])->name('producto.edit');
+Route::put('/producto', [App\Http\Controllers\ProductoController::class, 'update'])->name('producto.update');

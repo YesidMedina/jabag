@@ -18,8 +18,9 @@
         </div>
         <div class="form-group">
             {{ Form::label('imagen') }}
-            {{ Form::file('imagen', $barberium->precio, ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
+            {{ Form::file ('imagen',  ['class' => 'form-control' . ($errors->has('imagen') ? ' is-invalid' : ''), 'placeholder' => 'Imagen']) }}
             {!! $errors->first('imagen', '<div class="invalid-feedback">:message</p>') !!}
+
         </div>
         <div class="form-group">
             {{ Form::label('codigo') }}

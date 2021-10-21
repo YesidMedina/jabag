@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('template_title')
@@ -17,9 +19,11 @@
                     </div>
                     <div class="card-body">
 
-                        <form method="POST" action="{{ route('productos.edit', $producto->id) }}"  role="form" enctype="multipart/form-data" >
-                            {{ method_field('PATCH') }}
+                        <form method="POST" action="{{ route('productos.update', $producto->id) }}" >
+
                             @csrf
+
+                            @method('PUT')
 
                             @include('producto.form')
 

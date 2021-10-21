@@ -16,9 +16,11 @@
                         <span class="card-title">Update Cosmetico</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('cosmeticos.update', $cosmetico->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
+                        <form method="POST" action="{{ route('cosmeticos.update', $cosmetico->id) }}">
+
                             @csrf
+
+                            @method('PUT')
 
                             @include('cosmetico.form')
 

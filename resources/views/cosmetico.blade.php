@@ -33,7 +33,7 @@
             <figure class="effect-ming tm-video-item">
                 <img src="/public/img/{{$cosmetico->imagen }}" alt="Image" class="img-fluid d-flex justify-content-center">
                 <figcaption class="d-flex align-items-center justify-content-center">
-                    <h2>Details</h2>
+                    <h2>Ver</h2>
                     <a href="{{ action('App\Http\Controllers\CatalogocosmeController@detailcosmetico',['id' => $cosmetico->id]) }}" ></a>
                 </figcaption>
             </figure>
@@ -49,7 +49,7 @@
                 </div>
 
                 <div class="d-flex justify-content-center tm-text-gray">
-                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(218, 25, 170)">Precio:</a> {{ $cosmetico->precio }}</span>
+                    <span class="tm-text-gray-light px-2 text-dark"><a style="color:rgb(218, 25, 170)">Precio:</a> {{ $cosmetico->precio }}<sup> COP</sup></span>
                 </div>
 
             </div><br><br><br>
